@@ -1,3 +1,5 @@
+import sys
+
 import gi
 
 gi.require_version('Gtk', '3.0')
@@ -12,7 +14,7 @@ class MainWindow(Gtk.Window):
         super().__init__(title='MintFonts')
         self.set_default_size(constants.WIDTH, constants.HEIGHT)
 
-        self.fontpath = "/mnt/home/nick/Python/BeeWare/mintfonts/Bytesized-Regular.ttf"
+        self.fontpath = sys.argv[1]
 
         self.drawing_area = Gtk.DrawingArea()
         self.drawing_area.connect('draw', self.on_draw_font)
@@ -25,8 +27,6 @@ class MainWindow(Gtk.Window):
         self.show_font(cr)
     
     def show_font(self, cr):
-        print(self.get_size())
-
         face = render_text.load_font(self.fontpath)
         y = render_text.get_line_sep(face, constants.FONTSIZE)
 
