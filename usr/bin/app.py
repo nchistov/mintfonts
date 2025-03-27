@@ -25,7 +25,7 @@ class MainWindow(Gtk.Window):
         cr.paint()
 
         self.show_font(cr)
-    
+
     def show_font(self, cr):
         face = render_text.load_font(self.fontpath)
         y = render_text.get_line_sep(face, constants.FONTSIZE)

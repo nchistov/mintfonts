@@ -1,0 +1,6 @@
+Package: mintfonts
+Version: 1.0.0
+Architecture: all
+Depends: python3, python3-gi, python3-gi-cairo, python3-freetype, libgtk-3-0
+Maintainer: nchistov <nikola-chistov@mail.ru>
+Description: Simple program to list system fonts, preview and install fonts.
