@@ -1,12 +1,7 @@
 #!/usr/bin/python3
-import gi
+import os
+import sys
 
-gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk
-
-from app import MainWindow
-
-w = MainWindow()
-w.connect('destroy', Gtk.main_quit)
-w.show_all()
-Gtk.main()
+if __name__ == '__main__':
+    command = '../lib/mintFonts/app.py ' + ' '.join(sys.argv[1:])  # For debug
+    os.system(command)

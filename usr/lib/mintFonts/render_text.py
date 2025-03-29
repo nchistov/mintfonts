@@ -11,7 +11,7 @@ def load_font(fontpath: str):
     return face
 
 
-def render_text(cr: cairo.Content,
+def render_text(cr: cairo.Context,
                 text: str,
                 x: int, y: int,
                 face, fontsize: int):
