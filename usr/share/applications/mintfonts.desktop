@@ -1,0 +1,20 @@
+[Desktop Entry]
+Name=Fonts viewer
+Name[de]=Schriftartenanzeige
+Name[es]=Visor de fuentes
+Name[fr]=Visionneuse de polices
+Name[it]=Visualizzatore di caratteri
+Name[ru]=Просмотр шрифтов
+Comment=Preview and install .ttf files
+Comment[de]=Vorschau und Installation von TTF-Dateien
+Comment[es]=Obtener una vista previa e instalar archivos .ttf
+Comment[fr]=Prévisualiser et installer les fichiers .ttf
+Comment[it]=Visualizza in anteprima e installa i file .ttf
+Comment[ru]=Просмотрите и установите .ttf файлы
+Exec=mintfonts
+Icon=mintfonts
+Termianl=false
+Type=Application
+Encoding=UTF-8
+Categories:Application;Utils;
+Icon=cs-fonts

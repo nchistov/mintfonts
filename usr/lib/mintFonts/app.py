@@ -15,6 +15,7 @@ class MainWindow(Gtk.Window):
     def __init__(self):
         super().__init__(title='MintFonts')
         self.set_default_size(constants.WIDTH, constants.HEIGHT)
+        self.set_default_icon_name('preferences-desktop-font')
 
         self.drawing_area = Gtk.DrawingArea()
         self.drawing_area.connect('draw', self.on_draw_font)
@@ -37,6 +38,7 @@ class MainWindow(Gtk.Window):
         self.hb.set_subtitle(fontmeta['style'])
 
         button = Gtk.Button(label='Install')
+        button.get_style_context().add_class(Gtk.STYLE_CLASS_SUGGESTED_ACTION)
 
         if path in get_system_fonts():
             button.set_label('Installed')
