@@ -9,6 +9,7 @@ from gi.repository import Gtk, cairo
 import render_text
 import constants
 from get_fonts import get_system_fonts, get_font_metadata
+from install_font import install_font
 
 
 class MainWindow(Gtk.Window):
@@ -40,10 +41,12 @@ class MainWindow(Gtk.Window):
         button = Gtk.Button(label='Install')
         button.get_style_context().add_class(Gtk.STYLE_CLASS_SUGGESTED_ACTION)
 
+        button.connect('clicked', lambda x: install_font(x, path))
+
         if path in get_system_fonts():
             button.set_label('Installed')
             button.set_sensitive(False)
-        
+
         self.hb.pack_end(button)
 
     def on_draw_font(self, widget, cr):
