@@ -7,8 +7,5 @@ def get_system_fonts() -> [str]:
     return [s.decode('utf-8').split(':')[0] for s in output.splitlines()]
 
 
-def get_font_metadata(path: str) -> {str: str}:
-    family = check_output(['fc-query', path, '--format=%{family}']).decode('utf-8')
-    style = check_output(['fc-query', path, '--format=%{style}']).decode('utf-8')
-
-    return {'family': family, 'style': style}
+def get_font_metadata(path: str, fileds: [str]) -> {str: str}:
+    return {field: check_output(['fc-query', path, '--format=%{' + field + '}']).decode('utf-8') for field in fileds}

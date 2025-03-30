@@ -34,7 +34,7 @@ class MainWindow(Gtk.Window):
     def load_font(self, path):
         self.face = render_text.load_font(path)
 
-        fontmeta = get_font_metadata(path)
+        fontmeta = get_font_metadata(path, ['family', 'style'])
         self.hb.set_title(fontmeta['family'])
         self.hb.set_subtitle(fontmeta['style'])
 
