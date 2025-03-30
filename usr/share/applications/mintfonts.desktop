@@ -12,9 +12,9 @@ Comment[fr]=Prévisualiser et installer les fichiers .ttf
 Comment[it]=Visualizza in anteprima e installa i file .ttf
 Comment[ru]=Просмотр и установка .ttf файлы
 Exec=mintfonts %F
-Termianl=false
+Terminal=false
 Type=Application
 Encoding=UTF-8
-Categories:Application;Utils;
+Categories=Utility;Accessories;
 Icon=preferences-desktop-font
 MimeType=application/x-font-ttf;application/x-font-bdf;application/x-font-ghostscript;application/x-font-linux-psf;application/x-font-otf;application/x-font-pcf;application/x-font-snf;application/x-font-ttf
