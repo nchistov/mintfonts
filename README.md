@@ -5,12 +5,12 @@ This is a simple programm to view and install font files for Debian-based linuxe
 
 ### Installing
 
+First download a .deb file from [release page](https://github.com/nchistov/mintfonts/releases), then type in terminal:
+
 ```sh
-git clone https://github.com/nchistov/mintfonts.git
-dpkg-deb --build --nocheck mintfonts/
 dpkg -i mintfonts.deb
 ```
 
 ### Using
 
-Open a .ttf file from your file manager!
+Open a font file from your file manager!
